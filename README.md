@@ -47,6 +47,24 @@ The `refine-requirements` skill helps turn initial feature or application ideas 
 - Maintains question dependencies and adapts subsequent questions based on previous answers.
 - Allows the user to terminate the session at any point using `exit-qna`.
 
+**How to invoke:**
+
+Once installed, invoke the skill in Codex by referring to its name:
+
+```text
+$refine-requirements Build an application that allows customers to track their orders
+```
+
+You can also invoke it using a natural-language instruction, for example:
+
+```text
+Use the refine-requirements skill to refine the following feature:
+
+Build an application that allows customers to track their orders.
+```
+
+You can optionally ask the skill to inspect the current project directory for additional technical context.
+
 **Output:**
 
 The complete Q&A history, including questions, answers, confirmed decisions, assumptions, and unresolved items, is saved as a timestamped Markdown file under:
