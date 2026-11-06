@@ -26,66 +26,9 @@ The broader vision is to establish a workflow where:
 
 All skills in this repository are designed to be compatible with **OpenAI Codex**.
 
-The repository currently includes the following skill:
+The repository currently includes skills for different stages of the software development lifecycle.
 
-### Skills Catalog
-
-| Skill | Description | Documentation |
-|---|---|---|
-| `refine-requirements` | Refines vague or incomplete feature and application requirements through interactive, adaptive Q&A. Identifies ambiguities, assumptions, dependencies, and missing information. | [Usage & Documentation](skills/refine-requirements/SKILL.md) |
-
-
-### Refine Requirements
-
-The `refine-requirements` skill helps turn initial feature or application ideas into structured requirements through an interactive Q&A session.
-
-**How it works:**
-- Analyzes the initial requirement to identify ambiguities, gaps, and implicit assumptions.
-- Optionally inspects the current project directory for project-specific technical context.
-- Conducts an adaptive Q&A session, asking one clarifying question at a time.
-- Presents reasonable answer options with recommended defaults.
-- Maintains question dependencies and adapts subsequent questions based on previous answers.
-- Allows the user to terminate the session at any point using `exit-qna`.
-
-**How to invoke:**
-
-Once installed, invoke the skill in Codex by referring to its name:
-
-```text
-$refine-requirements Build an application that allows customers to track their orders
-```
-
-You can also invoke it using a natural-language instruction, for example:
-
-```text
-Use the refine-requirements skill to refine the following feature:
-
-Build an application that allows customers to track their orders.
-```
-
-You can optionally ask the skill to inspect the current project directory for additional technical context.
-
-**Output:**
-
-The complete Q&A history, including questions, answers, confirmed decisions, assumptions, and unresolved items, is saved as a timestamped Markdown file under:
-
-```text
-requirements/refinement-sessions/
-```
-
-Example:
-
-```text
-requirements/
-└── refinement-sessions/
-    └── refinement-session-20261106-123000.md
-```
-
-See [Skill Documentation](skills/refine-requirements/SKILL.md) for detailed behavior and usage instructions.
-
-### Installation
-
-See [How to Install](#how-to-install) for instructions on installing individual skills.
+See the [Skills Catalog](SKILLS.md) for available skills, capabilities, invocation instructions, usage examples, and output artifacts.
 
 ## Planned Capabilities
 
@@ -109,6 +52,7 @@ ai-sdlc/
 │   └── refine-requirements/
 │       └── SKILL.md
 ├── README.md
+├── SKILLS.md
 └── LICENSE
 ```
 
@@ -118,9 +62,11 @@ Additional skills and supporting resources will be introduced as the project evo
 
 Skills are maintained in the `skills/` directory.
 
-You can install an individual skill by copying its directory into one of the following Codex skill locations.
+Install an individual skill by copying its directory into one of the following Codex skill locations.
 
-**Option 1: Project-level installation**
+### Option 1: Project-level installation
+
+Copy the skill directory into:
 
 ```text
 <project-root>/.agents/skills/
@@ -132,23 +78,25 @@ For example:
 <project-root>/.agents/skills/refine-requirements/SKILL.md
 ```
 
-This makes the skill available within the corresponding project.
+The skill will be available within the corresponding project.
 
-**Option 2: User-level installation**
+### Option 2: User-level installation
+
+Copy the skill directory into:
+
+```text
+~/.agents/skills/
+```
+
+For example:
 
 ```text
 ~/.agents/skills/refine-requirements/SKILL.md
 ```
 
-This makes the skill available across your Codex projects.
+The skill will be available across your Codex projects.
 
-After installation, invoke the skill by its name:
-
-```text
-refine-requirements
-```
-
-Refer to the individual skill's documentation for its usage and behavior.
+For skill-specific invocation and usage instructions, see the [Skills Catalog](SKILLS.md).
 
 ## Contributing
 
@@ -167,7 +115,7 @@ The intention is to build this as an evolving, reusable foundation for structure
 
 ## Project Status
 
-**Early development / Experimental**
+**Early Development / Experimental**
 
 The repository is evolving. Skills and workflows may change as the overall AI-SDLC approach develops.
 
