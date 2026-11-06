@@ -34,6 +34,37 @@ The repository currently includes the following skill:
 |---|---|---|
 | `refine-requirements` | Refines vague or incomplete feature and application requirements through interactive, adaptive Q&A. Identifies ambiguities, assumptions, dependencies, and missing information. | [Usage & Documentation](skills/refine-requirements/SKILL.md) |
 
+
+### Refine Requirements
+
+The `refine-requirements` skill helps turn initial feature or application ideas into structured requirements through an interactive Q&A session.
+
+**How it works:**
+- Analyzes the initial requirement to identify ambiguities, gaps, and implicit assumptions.
+- Optionally inspects the current project directory for project-specific technical context.
+- Conducts an adaptive Q&A session, asking one clarifying question at a time.
+- Presents reasonable answer options with recommended defaults.
+- Maintains question dependencies and adapts subsequent questions based on previous answers.
+- Allows the user to terminate the session at any point using `exit-qna`.
+
+**Output:**
+
+The complete Q&A history, including questions, answers, confirmed decisions, assumptions, and unresolved items, is saved as a timestamped Markdown file under:
+
+```text
+requirements/refinement-sessions/
+```
+
+Example:
+
+```text
+requirements/
+└── refinement-sessions/
+    └── refinement-session-20261106-123000.md
+```
+
+See [Skill Documentation](skills/refine-requirements/SKILL.md) for detailed behavior and usage instructions.
+
 ### Installation
 
 See [How to Install](#how-to-install) for instructions on installing individual skills.
