@@ -26,25 +26,17 @@ The broader vision is to establish a workflow where:
 
 All skills in this repository are designed to be compatible with **OpenAI Codex**.
 
-The repository currently includes:
+The repository currently includes the following skill:
 
-### 1. Refine Requirements
+### Skills Catalog
 
-**Skill:** `refine-requirements`
+| Skill | Description | Documentation |
+|---|---|---|
+| `refine-requirements` | Refines vague or incomplete feature and application requirements through interactive, adaptive Q&A. Identifies ambiguities, assumptions, dependencies, and missing information. | [Usage & Documentation](skills/refine-requirements/SKILL.md) |
 
-Helps transform vague or incomplete feature and application requirements into clear, structured, and actionable requirements through an interactive Q&A process.
+### Installation
 
-Key capabilities:
-
-- Asks clarifying questions one at a time.
-- Identifies ambiguities, missing information, and implicit assumptions.
-- Sequences questions based on dependencies.
-- Provides answer options and recommends reasonable defaults.
-- Optionally inspects the current project directory for existing technical context.
-- Maintains a record of questions, answers, decisions, and unresolved items.
-- Produces a timestamped Markdown refinement session.
-
-**Installation:** See [How to Install](#how-to-install).
+See [How to Install](#how-to-install) for instructions on installing individual skills.
 
 ## Planned Capabilities
 
